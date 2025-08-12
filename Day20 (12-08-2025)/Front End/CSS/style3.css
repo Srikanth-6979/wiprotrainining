@@ -1,0 +1,20 @@
+.container {
+    border : solid 3px blue;
+    
+}
+
+.div1 {
+    border : dashed 3px green;
+    margin-top: 100px;
+    margin-right: 80px;
+    margin-left: 150px;
+    margin-bottom: 150px;
+}
+
+.div2 {
+    border : dotted 3px rgb(255, 0, 8);
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    margin-bottom: 100px;
+}

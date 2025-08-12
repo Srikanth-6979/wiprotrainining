@@ -1,0 +1,17 @@
+.pad {
+    padding-left: 80px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+.marg {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    margin-right: 200px;;
+}
+
+.brdr {
+    border: dotted 5px green;
+}

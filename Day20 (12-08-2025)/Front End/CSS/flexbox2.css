@@ -1,0 +1,168 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background-color: #5d615e;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d57836;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a7daae;
+  font-size: 1rem;
+  padding: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #dcdcdc;
+  border-radius: 4px;
+  color: #0073b1;
+}
+
+/* MAIN CONTENT */
+.main-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* ARTICLE */
+.content {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.content img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar img {
+  width: 120px;      
+  height: 120px;     
+  border-radius: 50%;
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto 15px;
+}
+
+
+.sidebar .social-links a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.author-details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.author-details img {
+  margin-bottom: 10px;
+}
+
+.recent-posts ul li a {
+  text-decoration: none;
+  color: #0077cc; /* blue link color */
+  transition: color 0.3s ease;
+}
+
+.recent-posts ul li a:hover {
+  color: #005fa3; /* darker blue on hover */
+}
+
+
+/* BUTTON */
+.cta-btn {
+  display: inline-block;
+  background: #0073b1;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #005f8d;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

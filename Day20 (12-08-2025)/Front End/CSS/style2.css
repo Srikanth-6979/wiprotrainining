@@ -1,0 +1,37 @@
+/* Universal Selector */
+* {
+    text-align:center;
+    color: green;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+/* Group Selector */
+h1, p {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 50px;
+}
+
+/* Class Selector */
+.class1 {
+    text-align:left;
+    color: orange;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* ID Selector */
+#id1 {
+    color: red;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+div.div1 {
+    text-align:right;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 50px;
+}
