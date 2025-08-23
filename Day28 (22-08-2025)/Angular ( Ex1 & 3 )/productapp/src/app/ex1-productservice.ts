@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Ex1Product } from './ex1-product';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Ex3Order } from './ex3-order';
+import { Ex1Product } from './ex1-product';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +9,6 @@ import { Ex3Order } from './ex3-order';
 export class Ex1Productservice {
 
   private apiUrl = 'http://localhost:9000/products';
-  private orderUrl = 'http://localhost:9000/orders';
 
   constructor(private http: HttpClient) { }
 
