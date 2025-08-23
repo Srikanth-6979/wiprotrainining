@@ -26,7 +26,7 @@ public class ProductController {
         return productService.getProductById(id);
     }
     
-    @PostMapping("/products")
+    @PostMapping
     public Product addProduct(@RequestBody Product product) {
         if (product.getQty() == 0) {
             product.setQty(0);
