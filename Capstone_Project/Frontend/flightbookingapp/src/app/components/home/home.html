@@ -1,0 +1,77 @@
+<div class="container mt-5 p-4 shadow rounded bg-white">
+  <h2 class="text-center mb-4">Flight Booking</h2>
+
+  <form (ngSubmit)="searchFlights()" class="row g-3">
+    
+    <!-- From -->
+    <div class="col-md-4">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>From</mat-label>
+        <mat-icon matPrefix>flight_takeoff</mat-icon> <!-- ✈️ icon -->
+        <input type="text" 
+               matInput 
+               [(ngModel)]="source" 
+               name="source"
+               [matAutocomplete]="autoFrom"
+               (input)="onSearch('source', $event.target.value)"
+               placeholder="Enter city or code" 
+               required>
+        <mat-autocomplete #autoFrom="matAutocomplete">
+          <mat-option *ngFor="let option of sourceOptions" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <!-- Swap button -->
+    <div class="col-md-1 d-flex align-items-center justify-content-center">
+      <button type="button" mat-icon-button (click)="swapCities()">
+        <mat-icon>swap_horiz</mat-icon>
+      </button>
+    </div>
+
+    <!-- To -->
+    <div class="col-md-4">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>To</mat-label>
+        <mat-icon matPrefix>flight_land</mat-icon> <!-- ✈️ icon -->
+        <input type="text" 
+               matInput 
+               [(ngModel)]="destination" 
+               name="destination"
+               [matAutocomplete]="autoTo"
+               (input)="onSearch('destination', $event.target.value)"
+               placeholder="Enter city or code" 
+               required>
+        <mat-autocomplete #autoTo="matAutocomplete">
+          <mat-option *ngFor="let option of destinationOptions" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <!-- Departure -->
+    <div class="col-md-3">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Departure</mat-label>
+        <input matInput 
+               [matDatepicker]="picker" 
+               [(ngModel)]="departureDate" 
+               name="departureDate" 
+               required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <!-- Submit -->
+    <div class="col-12 text-center mt-3">
+      <button type="submit" class="btn btn-primary px-4">
+        SEARCH
+      </button>
+    </div>
+
+  </form>
+</div>

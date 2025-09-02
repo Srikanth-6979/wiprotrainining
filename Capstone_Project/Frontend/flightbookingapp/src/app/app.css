@@ -1,0 +1,31 @@
+.navbar {
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 12px 0;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #fff !important;
+  transition: 0.2s;
+}
+
+.navbar-brand:hover {
+  color: #dff6e6 !important;
+  transform: scale(1.05);
+}
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffe082 !important;
+}
+.navbar .container > div {
+  display: flex;
+  align-items: center;
+}

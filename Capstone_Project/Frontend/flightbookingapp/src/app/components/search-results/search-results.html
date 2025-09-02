@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div class="row">
+    
+    <!-- Left Column: Filters -->
+    <div class="col-md-3">
+      <div class="filters card p-3 shadow-sm">
+        <h5 class="mb-3">Popular Filters</h5>
+        <label class="d-block mb-2">
+          <input type="checkbox" (change)="toggleNonStop($event)"> Non Stop
+        </label>
+        <label class="d-block mb-2">
+          <input type="checkbox" (change)="toggleAirline('IndiGo', $event)"> IndiGo
+        </label>
+        <label class="d-block mb-3">
+          <input type="checkbox" (change)="toggleAirline('Air India', $event)"> Air India
+        </label>
+        <button class="btn btn-sm btn-outline-secondary w-100" (click)="clearFilters()">Clear All</button>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="results">
+        <div *ngFor="let flight of filteredFlights" class="flight-card card mb-3 p-3 shadow-sm">
+          <h4 class="mb-1">{{flight.airline}}</h4>
+          <h5 class="mb-1">{{ flight.aircraftName }} <small class="text-muted">({{ flight.flightNumber }})</small></h5>
+          <p class="mb-1">{{ flight.source }} → {{ flight.destination }}</p>
+          <p class="mb-1">
+            Departure: {{ flight.departureTime }} | Arrival: {{ flight.arrivalTime }}
+          </p>
+          <p class="fw-bold text-success">₹ {{ flight.price }}</p>
+          <button class="btn btn-primary btn-sm" (click)="bookFlight(flight.id)">Book</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,46 @@
+
+.container {
+  max-width: 700px;
+  margin-top: 50px;
+  background:peachpuff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+
+h2 {
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+
+.mat-form-field {
+  margin-bottom: 0;
+}
+
+
+button[mat-icon-button] {
+  background: #e3f2fd;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+button[mat-icon-button]:hover {
+  background: #bbdefb;
+}
+
+
+.btn-primary {
+  background: #1976d2;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+}
+.btn-primary:hover {
+  background: #1565c0;
+}

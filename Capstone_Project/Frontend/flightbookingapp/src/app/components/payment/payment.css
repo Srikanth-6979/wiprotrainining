@@ -1,0 +1,152 @@
+.payment-page {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.payment-options {
+  width: 30%;
+  background: #f8f9fc;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+
+.payment-options h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.payment-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-options li {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+  font-size: 15px;
+}
+
+.payment-options li:hover {
+  background: #eef5ff;
+  color: #0d6efd;
+}
+
+.payment-options li.active {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+}
+.payment-form {
+  flex: 1;
+  padding: 30px;
+}
+
+.card-preview {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-preview img {
+  max-width: 120px;
+}
+
+/* Form fields */
+.payment-form form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 500;
+}
+
+.payment-form form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.payment-form form input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13,110,253,0.2);
+  outline: none;
+}
+.payment-form .row {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-form .col {
+  flex: 1;
+}
+.form-check {
+  margin-top: 10px;
+}
+
+.note {
+  font-size: 12px;
+  color: #777;
+  margin: 10px 0 20px;
+}
+.btn-pay {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-pay:hover:enabled {
+  background: #157347;
+  transform: translateY(-2px);
+}
+
+.btn-pay:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+.back-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.back-link a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .payment-page {
+    flex-direction: column;
+  }
+
+  .payment-options {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}
