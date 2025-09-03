@@ -10,7 +10,7 @@ import { IBookingRequest } from '../interface/ibookin-request';
 })
 export class BookingService {
 
-  private baseUrl = 'http://localhost:9999/booking';
+  private baseUrl = 'http://localhost:8081/booking';
 
   constructor(private http: HttpClient) {}
 

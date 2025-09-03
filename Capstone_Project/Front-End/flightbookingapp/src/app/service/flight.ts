@@ -5,7 +5,7 @@ import { Flight } from '../interface/flight';
 
 @Injectable({ providedIn: 'root' })
 export class FlightService {
-  private baseUrl = 'http://localhost:9999/flight';
+  private baseUrl = 'http://localhost:8082/flight';
 
   constructor(private http: HttpClient) {}
 
