@@ -7,9 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { TravelDate } from '../../service/travel-date';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { TravelDate } from '../../service/travel-date';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -30,15 +31,16 @@ import { MatNativeDateModule } from '@angular/material/core';
 export class Home {
   source: string = '';
   destination: string = '';
-  departureDate: string = '';
+  departureDate: Date | null = null;   // store as Date, not string!
 
   sourceOptions: string[] = [];
   destinationOptions: string[] = [];
 
-  constructor(private router: Router,private travelDate: TravelDate) {}
+  constructor(private router: Router, private travelDate: TravelDate) {}
 
   swapCities() {
     [this.source, this.destination] = [this.destination, this.source];
+    console.log("After swap → Source:", this.source, "Destination:", this.destination);
   }
 
   onSearch(field: string, value: string) {
@@ -57,17 +59,32 @@ export class Home {
   }
 
   searchFlights() {
+    if (!this.source || !this.destination) {
+      alert("Please select both source and destination");
+      return;
+    }
+    if (this.source === this.destination) {
+      alert("Source and destination cannot be the same");
+      return;
+    }
+
+    let formattedDate = '';
+    if (this.departureDate instanceof Date) {
+      formattedDate = this.departureDate.toISOString().split('T')[0]; // yyyy-MM-dd
+    }
+
     console.log("Source:", this.source);
     console.log("Destination:", this.destination);
-    console.log("Date:", this.departureDate);
-    this.travelDate.setDate(this.departureDate);
+    console.log("Date:", formattedDate);
+
+    this.travelDate.setDate(formattedDate);
+
     this.router.navigate(['/search'], {
       queryParams: {
         source: this.source,
         destination: this.destination,
-        date: this.departureDate
+        date: formattedDate
       }
     });
   }
-
 }

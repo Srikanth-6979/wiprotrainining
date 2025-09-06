@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+
 @Entity
 @Table(name = "bookings")
 @Data
@@ -21,7 +22,9 @@ public class Booking {
     private String email;
     private Double amount;
     private String cardNumber;
-    @Enumerated(EnumType.STRING)   
+
+    @Enumerated(EnumType.STRING)
     private PaymentStatus status;
-    
+
+    private LocalDateTime bookingTime;
 }
